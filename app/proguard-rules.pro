@@ -19,6 +19,8 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+
 # 高德地图
 -keep class com.amap.api.maps.**{*;}
 -keep class com.autonavi.amap.mapcore.*{*;}
@@ -42,3 +44,7 @@
 -keep class com.autonavi.**{*;}
 
 -keep class com.melody.map.gd_compose.**{*;}
+
+-keepclassmembers class ** {
+    boolean isZoomEnabled;
+}
